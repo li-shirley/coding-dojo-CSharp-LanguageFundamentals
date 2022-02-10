@@ -8,7 +8,7 @@ namespace WizardNinjaSamurai
         {
             Name = name;
             // Samurai should have a default health of 200
-            Health = 200;
+            health = 200;
         }
 
         // Provide an override Attack method to Samurai, which calls the base Attack and reduces the target to 0 if it has less than 50 remaining health points.       
@@ -30,9 +30,9 @@ namespace WizardNinjaSamurai
         // Samurai should have a method called Meditate, which when invoked, heals the Samurai back to full health
         public int Meditate()
         {
-            Health = 200;
+            health = 200;
             Console.WriteLine($"{Name} used MEDITATE. Health has been restored.");
-            return Health;
+            return health;
         }
     }
 }

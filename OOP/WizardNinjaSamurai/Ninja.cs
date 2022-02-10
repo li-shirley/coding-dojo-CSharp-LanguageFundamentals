@@ -29,7 +29,7 @@ namespace WizardNinjaSamurai
         public int Steal(Human target)
         {
             target.Health -= 5;
-            Health += 5;
+            health += 5;
             Console.WriteLine($"{Name} stole 5 health from {target.Name}! {Name} now has {Health} health. {target.Name} now has {target.Health} health.") ;
             return target.Health;
         }

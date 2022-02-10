@@ -9,12 +9,13 @@ namespace WizardNinjaSamurai
         public int Intelligence;
         public int Dexterity;
         // private int health;
-        public int Health;
+        protected int health;
 
-        // public int Health 
-        // {
-        //     get {return health;}
-        // }
+        public int Health 
+        {
+            get {return health;}
+            set {}
+        }
 
         public Human(string name)
         {
@@ -22,7 +23,7 @@ namespace WizardNinjaSamurai
             Strength = 3;
             Intelligence = 3;
             Dexterity = 3;
-            Health = 100;
+            health = 100;
         }
 
         public Human(string name, int strength, int intelligence, int dexterity, int hlth)
@@ -31,15 +32,15 @@ namespace WizardNinjaSamurai
             Strength = strength;
             Intelligence = intelligence;
             Dexterity = dexterity;
-            Health = hlth;
+            health = hlth;
         }
 
         public virtual int Attack(Human target)
         {
             int damage = Strength * 5;
-            target.Health -= damage;
-            Console.WriteLine($"{Name} attacked {target.Name} and dealt {damage} damage! {target.Name} now has {target.Health} health.");
-            return target.Health;
+            target.health -= damage;
+            Console.WriteLine($"{Name} attacked {target.Name} and dealt {damage} damage! {target.Name} now has {target.health} health.");
+            return target.health;
         }
     }
 }
