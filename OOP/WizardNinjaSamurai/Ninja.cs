@@ -19,7 +19,7 @@ namespace WizardNinjaSamurai
             if (rand.Next(5) == 0){
                 additionalDamage += 10;
             }
-            int damage = Dexterity * 5 + additionalDamage;
+            int damage = (Dexterity * 5) + additionalDamage;
             target.Health -= damage;
             Console.WriteLine($"{Name} attacked {target.Name} and dealt {damage} damage! {target.Name} now has {target.Health} health.");
             return target.Health;
