@@ -21,5 +21,14 @@ namespace WizardNinjaSamurai
             Console.WriteLine($"{Name} attacked {target.Name} and dealt {damage} damage! {target.Name} now has {target.Health} health.");
             return target.Health;
         }
+
+        // Wizard should have a method called Heal, which when invoked, heals a target Human by 10 * Intelligence
+        public int Heal(Human target)
+        {
+            int hp = Intelligence * 10;
+            target.Health += hp;
+            Console.WriteLine($"{Name} healed {target.Name} by {hp} hp! {target.Name} now has {target.Health} health.");
+            return target.Health;
+        }
     }
 }
