@@ -6,7 +6,7 @@ namespace DeckOfCards
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Deck firstDeck = new Deck();
         }
     }
 }
