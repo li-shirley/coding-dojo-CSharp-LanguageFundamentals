@@ -24,5 +24,12 @@ namespace WizardNinjaSamurai
             Console.WriteLine($"{Name} attacked {target.Name} and dealt {damage} damage! {target.Name} now has {target.Health} health.");
             return target.Health;
         }
+
+        // Samurai should have a method called Meditate, which when invoked, heals the Samurai back to full health
+        public int Meditate()
+        {
+            Health = 200;
+            return Health;
+        }
     }
 }
