@@ -29,6 +29,7 @@ namespace WizardNinjaSamurai
         public int Meditate()
         {
             Health = 200;
+            Console.WriteLine($"{Name} used MEDITATE. Health has been restored.");
             return Health;
         }
     }
