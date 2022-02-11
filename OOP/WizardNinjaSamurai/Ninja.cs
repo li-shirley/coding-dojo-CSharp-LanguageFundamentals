@@ -4,11 +4,9 @@ namespace WizardNinjaSamurai
 {
     public class Ninja : Human
     {
-        public Ninja (string name) : base (name)
+        public Ninja (string name) : base (name, 3, 3, 175, 100)
         {
-            Name = name;
             // Ninja should have a default dexterity of 175
-            Dexterity = 175;
         }
 
         // Provide an override Attack method to Ninja, which reduces the target by 5 * Dexterity and a 20% chance of dealing an additional 10 points of damage.
@@ -29,7 +27,7 @@ namespace WizardNinjaSamurai
         public int Steal(Human target)
         {
             target.Health -= 5;
-            health += 5;
+            Health += 5;
             Console.WriteLine($"{Name} stole 5 health from {target.Name}! {Name} now has {Health} health. {target.Name} now has {target.Health} health.") ;
             return target.Health;
         }

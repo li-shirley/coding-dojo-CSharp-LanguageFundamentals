@@ -8,13 +8,22 @@ namespace WizardNinjaSamurai
         public int Strength;
         public int Intelligence;
         public int Dexterity;
-        // private int health;
-        protected int health;
+        private int health;
 
         public int Health 
         {
             get {return health;}
-            set {}
+            set 
+            {
+                if (health < 0)
+                {
+                    health = 0;
+                }
+                else
+                {
+                    health = value;
+                }
+            }
         }
 
         public Human(string name)
